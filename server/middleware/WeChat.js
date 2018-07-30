@@ -25,7 +25,7 @@ async function getAccessToken() {
       return token.accessToken
     }
     catch (e) {
-      AccessTokenModel.logger.log('Getting miniapp access token failed,', e);
+      AccessTokenModel.logger.log('Getting miniapp access token failed.', e);
       return false
     }
   }
