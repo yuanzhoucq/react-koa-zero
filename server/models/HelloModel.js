@@ -12,9 +12,9 @@ class HelloModel extends BaseModel {
     try {
       const r = await this.model.findOne({name: "world"});
       if (!r) {
-        const n = await new this.model({name: "world"});
-        await n.save();
-        return await this.model.findOne({name: "world"}).name
+        await new this.model({name: "world"}).save();
+        const r = await this.model.findOne({name: "world"});
+        return r.name
       }
       else return r.name
     } catch (err) {

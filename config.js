@@ -17,6 +17,12 @@ let Config = {
   log4js,
   API: {
     GoogleMapApiKey: ""
+  },
+  WeChat: {
+    miniApp: {
+      appId: "",
+      appSecret: ""
+    }
   }
 };
 
