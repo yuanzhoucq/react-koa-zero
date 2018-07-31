@@ -1,21 +1,40 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import {Layout} from "element-react";
+import {css} from "glamor"
+import 'element-theme-default';
+import WelcomePage from "./pages/Welcome";
+import NavMenu from "./components/NavMenu";
+import Header from "./components/Header";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo"/>
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Router>
+        <div>
+          <Layout.Row>
+            <Header/>
+          </Layout.Row>
+          <Layout.Row>
+            <Layout.Col span="6">
+              <NavMenu/>
+            </Layout.Col>
+            <Layout.Col span="18">
+              <div {...bodyContentRule}>
+                <Route exact path="/" component={WelcomePage}/>
+                <Route path="/about" component={WelcomePage}/>
+                <Route path="/topics" component={WelcomePage}/>
+              </div>
+            </Layout.Col>
+          </Layout.Row>
+        </div>
+      </Router>
     );
   }
 }
+
+const bodyContentRule = css({
+  "margin": 20,
+});
 
 export default App;
