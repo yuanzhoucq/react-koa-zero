@@ -13,13 +13,15 @@ class App extends Component {
       <Router>
         <div>
           <Layout.Row>
-            <Header/>
+            <Layout.Col span="24" style={{position: "fixed", zIndex: 100}}>
+              <Header style={{position: "fixed"}}/>
+            </Layout.Col>
           </Layout.Row>
-          <Layout.Row>
-            <Layout.Col span="6">
+          <Layout.Row style={{marginTop: 60}}>
+            <Layout.Col span="4" style={{position: "fixed"}}>
               <NavMenu/>
             </Layout.Col>
-            <Layout.Col span="18">
+            <Layout.Col span="20" offset="4">
               <div {...bodyContentRule}>
                 <Route exact path="/" component={WelcomePage}/>
                 <Route path="/about" component={WelcomePage}/>
