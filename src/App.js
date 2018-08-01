@@ -23,9 +23,9 @@ class App extends Component {
             </Layout.Col>
             <Layout.Col span="20" offset="4">
               <div {...bodyContentRule}>
-                <Route exact path="/" component={WelcomePage}/>
-                <Route path="/about" component={WelcomePage}/>
-                <Route path="/topics" component={WelcomePage}/>
+                <Route exact path="/admin" component={WelcomePage}/>
+                <Route path="/admin/about" component={WelcomePage}/>
+                <Route path="/admin/topics" component={WelcomePage}/>
               </div>
             </Layout.Col>
           </Layout.Row>

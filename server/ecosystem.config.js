@@ -4,7 +4,7 @@
 module.exports = {
   apps: [{
     name: "app",
-    script: "./app.js",
+    script: "./koa.js",
     env: {
       NODE_ENV: "production",
     }

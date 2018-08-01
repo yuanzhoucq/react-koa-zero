@@ -8,6 +8,7 @@
     "glamor": "^2.20.40",
     "koa": "^2.5.2",
     "koa-bodyparser": "^4.2.1",
+    "koa-mount": "^3.0.0",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "log4js": "^3.0.2",
@@ -22,6 +23,7 @@
     "react-scripts": "1.1.4"
   },
   "proxy": "http://localhost:5000/",
+  "homepage": "/admin",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
