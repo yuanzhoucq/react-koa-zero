@@ -11,6 +11,9 @@ log4js.configure({
 
 
 let Config = {
+  server: {
+    port: 5000
+  },
   database: {
     url: "mongodb://localhost:27017/test"
   },
@@ -25,5 +28,10 @@ let Config = {
     }
   }
 };
+
+if (process.env.NODE_ENV === "production") {
+  Config.database.url = "";
+  Config.server.port = 5000
+}
 
 module.exports = Config;
