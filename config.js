@@ -24,7 +24,8 @@ let Config = {
   WeChat: {
     miniApp: {
       appId: "",
-      appSecret: ""
+      appSecret: "",
+      templateID: ""
     }
   }
 };

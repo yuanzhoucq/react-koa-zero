@@ -46,8 +46,32 @@ async function getSessionKeyAndOpenID(code) {
   }
 }
 
+async function sendTemplateMsg(openID, formId, data) {
+  try {
+    let keywords = {};
+    data.forEach((item, index) => {
+      keywords[`keyword${index + 1}`] = {value: item}
+    });
+
+    return await rp({
+      method: 'POST',
+      uri: `https://api.weixin.qq.com/cgi-bin/message/wxopen/template/send?access_token=${await getAccessToken()}`,
+      body: JSON.stringify({
+        "touser": openID,
+        "template_id": Config.templateID,
+        "form_id": formId,
+        "data": keywords
+      })
+    })
+  } catch (e) {
+    console.log("Sending template msg failed.", e);
+    return false
+  }
+}
+
 module.exports = {
   getAccessToken,
-  getSessionKeyAndOpenID
+  getSessionKeyAndOpenID,
+  sendTemplateMsg
 };
 
