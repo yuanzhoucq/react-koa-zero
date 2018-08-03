@@ -35,8 +35,8 @@ class NavMenu extends Component {
 }
 
 const navMenuRule = css({
-  "min-height": "calc(100vh - 60px)",
-  "background-color": "#E9EEF4"
+  minHeight: "calc(100vh - 60px)",
+  backgroundColor: "#E9EEF4"
 });
 
 export default NavMenu;
