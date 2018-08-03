@@ -2,7 +2,7 @@ const {checkAuth} = require("../middleware/Auth");
 
 async function login(ctx) {
   const {username, password} = ctx.request.body;
-  if (username === "ep" && password === "europass") {
+  if (username === "hello" && password === "world") {
     ctx.session.userrole = "admin";
     ctx.body = {userRole: "admin"};
   }
