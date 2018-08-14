@@ -1,9 +1,13 @@
-const HelloModel = require("../models/HelloModel");
+//const HelloModel = require("../models/HelloModel");
 
-async function sayHelloWorld(ctx) {
-  ctx.body = `Hello, ${await HelloModel.getHelloName()}!`
+
+const BaseController = require('./BaseController');
+
+class HelloController extends BaseController {
+	async sayHelloWorld(ctx) {
+ 		//ctx.body = `Hello, ${await HelloModel.getHelloName()}!`
+ 		ctx.body = "Hello";
+	}
+
 }
-
-module.exports = {
-  sayHelloWorld
-};
+module.exports = new HelloController();
