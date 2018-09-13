@@ -15,11 +15,12 @@ let Config = {
     port: 5000
   },
   database: {
-    url: "mongodb://localhost:27017/test"
+    url: "mongodb://192.168.1.200:27017/test"
   },
   log4js,
   API: {
-    GoogleMapApiKey: ""
+    GoogleMapApiKey: "",
+    TencentMapApiKey: "",
   },
   WeChat: {
     miniApp: {
