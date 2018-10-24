@@ -19,7 +19,8 @@ let Config = {
   },
   log4js,
   API: {
-    GoogleMapApiKey: ""
+    GoogleMapApiKey: "",
+    TencentMapApiKey: "",
   },
   WeChat: {
     miniApp: {
