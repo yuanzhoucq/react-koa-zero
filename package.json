@@ -13,7 +13,7 @@
     "koa-session": "^5.8.2",
     "koa-static": "^5.0.0",
     "log4js": "^3.0.2",
-    "mongoose": "^5.2.5",
+    "mongoose": "^5.7.5",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
